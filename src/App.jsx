@@ -1,12 +1,11 @@
 import React from 'react';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
-import Index from './Pages/Home'
+import HomeIndex from './Pages/Home/HomeIndex';
 import Hero from './Pages/Home/Hero';
-// import Index from './Pages/Home/Mainindex';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Index />}>
+    <Route path="/" element={<HomeIndex />}>
       <Route index element={<Hero />} />
     </Route>
   )
