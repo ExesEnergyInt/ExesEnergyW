@@ -1,7 +1,8 @@
 import React from 'react';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
-import Index from './Pages/Home'; 
+// import Index from './Pages/Home'; 
 import Hero from './Pages/Home/Hero';
+import Index from './Pages/Home/Mainindex';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
