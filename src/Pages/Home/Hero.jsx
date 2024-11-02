@@ -14,7 +14,7 @@ function Hero() {
       px={4}
     >
       <Box
-        mt={{ base: '10%', sm: '20%', md: '15%', lg: '10%' }}
+        mt={{ base: '10%', sm: '10%', md: '10%', lg: '10%' }}
         textAlign="center"
         maxWidth="90vw"
       >
@@ -23,7 +23,7 @@ function Hero() {
           fontSize={{ base: '3xl', md: '5xl', lg: '6xl' }}
           fontWeight="700"
           color="#026834"
-          // mt={{ lg: 10, sm: 5 }}
+          mt={{ lg: 10, sm: 5 }}
           mb={2}
         >
           Switch to Solar Energy Today
