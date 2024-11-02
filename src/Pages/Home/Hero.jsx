@@ -23,7 +23,7 @@ function Hero() {
           fontSize={{ base: '3xl', md: '5xl', lg: '6xl' }}
           fontWeight="700"
           color="#026834"
-          mt={{ lg: 10, sm: 5 }}
+          // mt={{ lg: 10, sm: 5 }}
           mb={2}
         >
           Switch to Solar Energy Today
@@ -52,7 +52,7 @@ function Hero() {
           <Image
             src="Images/forHero/Rectangle4204.png"
             alt="Solar Energy"
-            maxWidth={{ base: "80%", sm: "80%", md: "100%", lg: "80%" }}
+            maxWidth={{ base: "100%", sm: "100%", md: "100%", lg: "80%" }}
             objectFit="cover"
           />
         </Flex>
