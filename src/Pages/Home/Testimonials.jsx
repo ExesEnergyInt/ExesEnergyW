@@ -1,4 +1,13 @@
-import { Box, Text, Avatar, Flex, IconButton, Heading, HStack, Button, useColorModeValue } from '@chakra-ui/react';
+import {
+  Box,
+  Text,
+  Avatar,
+  Flex,
+  IconButton,
+  Heading,
+  HStack,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
@@ -6,7 +15,7 @@ const testimonials = [
   {
     name: 'Gbadebo Samuel',
     feedback:
-      'My go-to icon pack for every project that I start working on. The flexibility and customization it gives me hasn\'t been matched by anyone so far.',
+      "My go-to icon pack for every project that I start working on. The flexibility and customization it gives me hasn't been matched by anyone so far.",
     image: 'https://via.placeholder.com/150',
   },
   {
@@ -25,7 +34,7 @@ const testimonials = [
 
 const TestimonialSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const slideInterval = 5000; // 5 seconds interval for the slider
+  const slideInterval = 5000;
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
@@ -43,7 +52,6 @@ const TestimonialSlider = () => {
     setCurrentIndex(index);
   };
 
-  // Set up the automatic slide timer using useEffect
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) =>
@@ -51,7 +59,6 @@ const TestimonialSlider = () => {
       );
     }, slideInterval);
 
-    // Clean up the timer when the component is unmounted or when currentIndex changes
     return () => clearInterval(timer);
   }, [currentIndex]);
 
@@ -59,21 +66,21 @@ const TestimonialSlider = () => {
   const cardBg = useColorModeValue('white', 'gray.700');
 
   return (
-    <Box textAlign="center" maxW="700px" mx="auto" py={12} px={6}>
-      <Heading as="h3" size="lg" mb={2}>
+    <Box textAlign="center" maxW={{ base: "90%", md: "700px" }} mx="auto" py={12} px={6}>
+      <Heading as="h3" size="lg" mb={2} fontSize={{ base: "2xl", md: "3xl" }}>
         Testimonials
       </Heading>
-      <Text fontSize="md" color="gray.500" mb={8}>
+      <Text fontSize={{ base: "sm", md: "md" }} color="gray.500" mb={8}>
         Some of the most memorable reviews we heard from our clients
       </Text>
 
-      <Flex position="relative" alignItems="center" justifyContent="center" mb={6}>
+      <Flex position="relative" alignItems="center" justifyContent="center" mb={6} px={4}>
         <IconButton
           aria-label="Previous testimonial"
           icon={<FaArrowLeft />}
           onClick={handlePrev}
           position="absolute"
-          left="-50px"
+          left={{ base: "10px", md: "-50px" }}
           top="50%"
           transform="translateY(-50%)"
           backgroundColor="green.500"
@@ -86,20 +93,20 @@ const TestimonialSlider = () => {
         <Box
           bg={cardBg}
           shadow="xl"
-          p={8}
+          p={{ base: 4, md: 8 }}
           rounded="lg"
-          maxW="550px"  // Increased width of the box
+          maxW="550px"
           textAlign="center"
           position="relative"
           borderTopWidth="6px"
           borderTopColor="green.600"
         >
-          <Text fontSize="xl" mb={4} fontStyle="italic">
+          <Text fontSize={{ base: "md", md: "xl" }} mb={4} fontStyle="italic">
             "{feedback}"
           </Text>
           <Flex align="center" justify="center" mt={6}>
             <Avatar src={image} name={name} mr={2} size="md" />
-            <Text fontWeight="bold" fontSize="lg">{name}</Text>
+            <Text fontWeight="bold" fontSize={{ base: "md", md: "lg" }}>{name}</Text>
           </Flex>
         </Box>
         <IconButton
@@ -107,7 +114,7 @@ const TestimonialSlider = () => {
           icon={<FaArrowRight />}
           onClick={handleNext}
           position="absolute"
-          right="-50px"
+          right={{ base: "10px", md: "-50px" }}
           top="50%"
           transform="translateY(-50%)"
           backgroundColor="green.500"
@@ -119,7 +126,6 @@ const TestimonialSlider = () => {
         />
       </Flex>
 
-      {/* Dot indicators for the slider */}
       <HStack justify="center" spacing={1}>
         {testimonials.map((_, index) => (
           <Box
