@@ -34,7 +34,7 @@ function Nav() {
       <Flex
         gap={5}
         color="Black"
-        fontSize={{ base: 'xs', sm: 'sm', lg: 'lg' }}
+        fontSize={{ base: 'sm', sm: 'sm', lg: 'lg' }}
         textAlign={{ base: 'center', sm: 'right' }} 
         display={{base:'none', sm:'none', lg: 'flex', xl: 'flex'}}
       >
