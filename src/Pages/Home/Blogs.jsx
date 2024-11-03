@@ -4,10 +4,7 @@ import { ArrowForwardIcon } from '@chakra-ui/icons';
 
 function Blogs() {
   return (
-    <Box
-      p={{ base: 4, md: 8, lg: 12 }}
-      mb={10}
-    >
+    <Box p={{ base: 4, md: 8, lg: 12 }} mb={10}>
       <Text
         as="h1"
         fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
@@ -28,71 +25,45 @@ function Blogs() {
         gap={6}
         flexDir={{ base: 'column', md: 'row', lg: 'row' }}
       >
-        {Array(3).fill().map((_, index) => (
-          <Box
-            key={index}
-            w={{ base: '50%', md: '30%', lg: '20%' }}
-            borderRadius="10px"
-            border="1px solid"
-            overflow="hidden"
-          >
-            <Image
-              src="Images/Avocado.png"
-              alt="blog"
-              w="100%"
-              borderRadius="10px 10px 0 0"
-            />
-            <Box p="3">
-              <Text as="h3" fontSize="2xl" fontWeight="500" mt="2">
-                Heading
-              </Text>
-              <Text as="p" mt="2">
-                Consilio difficultates superare potest esse, immo
-              </Text>
-              <Button variant="link" rightIcon={<ArrowForwardIcon />} pl="0">
-                Read More
-              </Button>
+        {Array(3)
+          .fill()
+          .map((_, index) => (
+            <Box
+              key={index}
+              w={{ base: '90%', sm: '80%', md: '40%', lg: '25%' }}
+              maxW="400px"
+              borderRadius="10px"
+              border="1px solid #E2E8F0"
+              overflow="hidden"
+              boxShadow="lg"
+            >
+              <Image
+                src="Images/Avocado.png"
+                alt="blog"
+                w="100%"
+                h={{ base: '180px', sm: '220px' }}
+                objectFit="cover"
+                borderRadius="10px 10px 0 0"
+              />
+              <Box p={4}>
+                <Text as="h3" fontSize={{ base: 'lg', md: 'xl' }} fontWeight="500" mt="2">
+                  Heading
+                </Text>
+                <Text as="p" mt="2" fontSize={{ base: 'sm', md: 'md' }} color="gray.600">
+                  Consilio difficultates superare potest esse, immo
+                </Text>
+                <Button
+                  variant="link"
+                  rightIcon={<ArrowForwardIcon />}
+                  pl="0"
+                  mt={2}
+                  colorScheme="green"
+                >
+                  Read More
+                </Button>
+              </Box>
             </Box>
-          </Box>
-        ))}
-      </Flex>
-
-      <Flex
-        flexWrap="wrap"
-        justifyContent="center"
-        alignItems="center"
-        gap={6}
-        mt={6}
-        flexDir={{ base: 'column', md: 'row', lg: 'row' }}
-        display={{base: 'none', md: 'flex', lg: 'flex'}}
-      >
-        {Array(3).fill().map((_, index) => (
-          <Box
-            key={index}
-            w={{ base: '50%', md: '30%', lg: '20%' }}
-            borderRadius="10px"
-            border="1px solid"
-            overflow="hidden"
-          >
-            <Image
-              src="Images/Avocado.png"
-              alt="blog"
-              w="100%"
-              borderRadius="10px 10px 0 0"
-            />
-            <Box p="3">
-              <Text as="h3" fontSize="2xl" fontWeight="500" mt="2">
-                Heading
-              </Text>
-              <Text as="p" mt="2">
-                Consilio difficultates superare potest esse, immo
-              </Text>
-              <Button variant="link" rightIcon={<ArrowForwardIcon />} pl="0">
-                Read More
-              </Button>
-            </Box>
-          </Box>
-        ))}
+          ))}
       </Flex>
     </Box>
   );
