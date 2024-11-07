@@ -22,7 +22,7 @@ function Nav() {
       boxShadow="md"
     >
       {/* Logo */}
-      <Link to="/home">
+      <Link to="/">
         <Image 
           src="/Images/ag(7)1.png"
           width={{ base: '120px', sm: '150px', md: '180px', lg: '200px' }}
@@ -37,7 +37,7 @@ function Nav() {
         fontSize={{ base: 'sm', md: 'md', lg: 'lg' }}
         display={{ base: 'none', md: 'none', lg: 'flex' }}
       >
-        <Link to="/services">Services</Link>
+        <Link to="/Services">Services</Link>
         <Link to="/pricing">Pricing</Link>
         <Link to="/verticals">Verticals</Link>
         <Link to="/case-studies">Case Studies</Link>
@@ -86,7 +86,7 @@ function Nav() {
           fontSize="xl"
           color="black"
         >
-          <Link to="/services" onClick={() => changeDisplay('none')}>Services</Link>
+          <Link to="/Services" onClick={() => changeDisplay('none')}>Services</Link>
           <Link to="/pricing" onClick={() => changeDisplay('none')}>Pricing</Link>
           <Link to="/verticals" onClick={() => changeDisplay('none')}>Verticals</Link>
           <Link to="/case-studies" onClick={() => changeDisplay('none')}>Case Studies</Link>

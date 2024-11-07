@@ -23,7 +23,6 @@ function Hero() {
           fontSize={{ base: '3xl', md: '5xl', lg: '6xl' }}
           fontWeight="700"
           color="#026834"
-          // mt={{ lg: 10, sm: 5 }}
           mb={2}
         >
           Switch to Solar Energy Today

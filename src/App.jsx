@@ -1,23 +1,38 @@
 import React from 'react';
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+
+// For Home page
 import HomeIndex from './Pages/Home/HomeIndex';
 import Hero from './Pages/Home/Hero';
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<HomeIndex />}>
-      <Route index element={<Hero />} />
-    </Route>
-  )
-);
+// For Error Messages
+import ErrorMess from './Pages/ErrorMessage';
 
+// Service page
+import ServiceIndex from './Pages/Services/ServiceIndex';
+import ServiceHero from './Pages/Services/ServiceHero';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <HomeIndex />,
+    children: [
+      { index: true, element: <Hero /> }
+    ],
+    errorElement: <ErrorMess />,
+  },
+  {
+    path: '/Services',
+    element: <ServiceIndex />,
+    children: [
+      { index: true, element: <ServiceHero /> }
+    ],
+    errorElement: <ErrorMess />,
+  },
+]);
 
 function App() {
-return (
-    <RouterProvider router={router}>
-      {/* Other components can go here if needed */}
-    </RouterProvider>
-  );
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
