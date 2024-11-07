@@ -7,7 +7,7 @@ function Hero() {
     <Flex
       backgroundColor="#E3FFF1"
       width="100vw"
-      height="100vh"
+      // height="100vh"
       alignItems="center"
       justifyContent="center"
       flexDirection="column"

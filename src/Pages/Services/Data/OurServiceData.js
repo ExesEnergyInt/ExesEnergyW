@@ -15,6 +15,10 @@ export const OurServiceData = [
     heading: "Monitoring",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ",
   },
+];
+
+
+export const OurServiceData2 = [
   {
     image: "/Images/forHero/verified.png",
     heading: "Consultation",
