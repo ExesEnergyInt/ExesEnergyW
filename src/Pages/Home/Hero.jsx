@@ -7,15 +7,15 @@ function Hero() {
     <Flex
       backgroundColor="#E3FFF1"
       width="100vw"
-      // height="100vh"
-      pt='8%'
+      height="100vh"
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
       px={4}
+      pt={{ lg:'20%', md: '15%', sm:'15%'}}
     >
       <Box
-        mt={{md: '10%', lg: '15%' }}
+        mt={{sm:'8%', xs: '8%', md: '10%', lg: '20%' }}
         textAlign="center"
         maxWidth="90vw"
       >
