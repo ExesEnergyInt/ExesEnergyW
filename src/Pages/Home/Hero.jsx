@@ -14,7 +14,7 @@ function Hero() {
       px={4}
     >
       <Box
-        mt={{ base: '8%', sm: '8%', md: '10%', lg: '15%' }}
+        mt={{md: '10%', lg: '15%' }}
         textAlign="center"
         maxWidth="90vw"
       >
