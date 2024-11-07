@@ -19,6 +19,7 @@ function Hero() {
         textAlign="center"
         maxWidth="90vw"
       >
+        
         <Text
           as="h1"
           fontSize={{ base: '3xl', md: '5xl', lg: '6xl' }}
