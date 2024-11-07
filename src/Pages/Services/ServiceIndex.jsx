@@ -11,6 +11,7 @@ function ServiceIndex() {
       <Nav />
       <ServiceHero />
       <OurService />
+      <Benefits />
       
       <Footer />
     
