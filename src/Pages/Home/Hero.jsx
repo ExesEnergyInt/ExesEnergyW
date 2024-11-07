@@ -7,8 +7,7 @@ function Hero() {
     <Flex
       backgroundColor="#E3FFF1"
       width="100vw"
-      // height="100vh"
-      pt='8%'
+      height={{lg:'100vh', md: '100vh', sm:'50vh'}}
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
