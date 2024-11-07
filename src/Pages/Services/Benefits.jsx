@@ -1,111 +1,61 @@
-import { Box, Flex, Image, Text } from '@chakra-ui/react'
+import { Box, Flex, Image, Text, Button, SimpleGrid } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
-import React from 'react'
+import React from 'react';
+import { BenefitsData } from './Data/BenefitsData';
 
 function Benefits() {
   return (
-
     <Flex
-      flexDir={{ lg: 'column', md: 'column', sm: 'row' }}
-      gap='4'
+      justifyContent="center"
+      flexDirection={{ base: 'column', md: 'row' }}
+      alignItems="center"
+      gap={{ base: 6, md: '8%' }}
+      px={{ base: 4, md: 8 }}
+      py={{ base: 4, md: 8 }}
+      border="none"
     >
-      <Box>
+      <Box w={{ base: '100%', md: '50%' }} mb={{ base: 4, md: 0 }}>
         <Image
-          src='/Images/Services/BluePanel.png'
-          w='100%'
+          src="/Images/Services/BluePanel.png"
+          alt="Benefits Background"
+          w="100%"
+          objectFit="cover"
         />
-
       </Box>
 
-      <Box>
-        <Text as='h4'
-          color="#006633"
-          fontWeight='700'
-        >
+      <Box w={{ base: '100%', md: '50%' }} textAlign={{ base: 'center', md: 'left' }}>
+        <Text as="h4" color="#006633" fontWeight="700" fontSize={{ base: '2xl', md: '4xl' }}>
           Benefits
-
         </Text>
         
-        <Text as='p'
-          pt={3}
-        >
+        <Text as="p" pt={2} fontSize={{ base: 'md', md: 'lg' }}>
           Creating Quality urban lifestyles, building stronger communities
         </Text>
 
-        <Flex>
-          <Flex>
-            <Image
-              src='/Images/Services/UIUX_2.png'
-            />
-            <Text as='p'>
-              Experienced
-            </Text>
+        <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={4} mt={6}>
+          {BenefitsData.map((data, index) => (
+            <Flex key={index} align="center" mt={4}>
+              <Image src={data.image} alt="Benefit Icon" boxSize={{ base: '20px', md: '30px' }} mr={3} />
+              <Text as="p" fontSize={{ base: 'md', md: 'lg' }} fontWeight="600">
+                {data.heading}
+              </Text>
+            </Flex>
+          ))}
+        </SimpleGrid>
 
-          </Flex>
-          <Flex>
-            <Image
-              src='/Images/Services/UIUX_2.png'
-            />
-            <Text as='p'>
-              Affordable
-            </Text>
-
-          </Flex>
-          <Flex>
-            <Image
-              src='/Images/Services/UIUX_2.png'
-            />
-            <Text as='p'>
-              Reliable
-            </Text>
-
-          </Flex>
-          <Flex>
-            <Image
-              src='/Images/Services/UIUX_2.png'
-            />
-            <Text as='p'>
-              Customizable
-            </Text>
-
-          </Flex>
-          <Flex>
-            <Image
-              src='/Images/Services/UIUX_2.png'
-            />
-            <Text as='p'>
-              Sustainable
-            </Text>
-
-          </Flex>
-          <Flex>
-            <Image
-              src='/Images/Services/UIUX_2.png'
-            />
-            <Text as='p'>
-              Trustworthy
-            </Text>
-
-          </Flex>
-        </Flex>
-
-         <Button
-          mt={10}
-          fontSize="lg"
-          gap={4}
-          p={8}
-          rightIcon={<ArrowForwardIcon size="lg" />}
+        <Button
+          mt={6}
+          fontSize={{ base: 'md', md: 'lg' }}
+          rightIcon={<ArrowForwardIcon />}
           colorScheme="green"
+          px={6}
+          py={4}
         >
           Get A Free Quote
         </Button>
-
-        
-
-        
       </Box>
     </Flex>
-  )
+  );
 }
 
-export default Benefits
+export default Benefits;
