@@ -3,6 +3,8 @@ import Nav from '../../Components/nav'
 import Footer from '../../Components/footer'
 import ServiceHero from './ServiceHero'
 import OurService from './OurService'
+import Benefits from './Benefits'
+// import Benefits from './Benefits'
 
 function ServiceIndex() {
   return (
@@ -10,6 +12,8 @@ function ServiceIndex() {
       <Nav />
       <ServiceHero />
       <OurService />
+      <Benefits />
+      {/* <Benefits /> */}
       
       <Footer />
     
