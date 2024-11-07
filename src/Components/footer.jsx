@@ -21,8 +21,15 @@ function Footer() {
   const isError = input === '';
 
   return (
-    <Box backgroundColor="#E3FFF1" py={10} px={4}>
-      <Flex justifyContent="center" w="100%">
+    <Box
+      backgroundColor="#E3FFF1"
+      py={10}
+      w="100vw"
+      position="relative"
+      left="50%"
+      transform="translateX(-50%)" // Center the Box horizontally
+    >
+      <Flex justifyContent="center">
         <Flex
           m={10}
           flexDirection={{ base: 'column', md: 'row' }}
@@ -59,40 +66,25 @@ function Footer() {
                 <FormErrorMessage>Email is required.</FormErrorMessage>
               )}
             </FormControl>
-            <Button
-              fontSize={{ base: 'sm', md: 'md' }}
-              colorScheme="green"
-              w="full"
-              maxW="200px"
-            >
+            <Button fontSize={{ base: 'sm', md: 'md' }} colorScheme="green" w="full" maxW="200px">
               Subscribe
             </Button>
           </Box>
 
           {/* Company Info Section */}
           <Box textAlign={{ base: 'center', md: 'left' }} mb={{ base: 10, md: 0 }}>
-            <Link to="/Home">
+            <Link to="/">
               <Image
                 src="/Images/ag(7)1.png"
                 width={{ base: '150px', md: '180px', lg: '250px' }}
                 mx={{ base: 'auto', md: '0' }}
               />
             </Link>
-            <Text
-              w={{ base: '100%', md: '80%' }}
-              mt={5}
-              fontSize={{ base: 'sm', md: 'md', lg: 'lg' }}
-            >
-              We are a reliable and experienced solar company that offers affordable and
-              sustainable energy solutions, customized to fit your unique needs.
+            <Text w={{ base: '100%', md: '80%' }} mt={5} fontSize={{ base: 'sm', md: 'md', lg: 'lg' }}>
+              We are a reliable and experienced solar company that offers affordable and sustainable
+              energy solutions, customized to fit your unique needs.
             </Text>
-            <Flex
-              justifyContent={{ base: 'center', md: 'flex-start' }}
-              gap={3}
-              color="green"
-              mt={5}
-            >
-              
+            <Flex justifyContent={{ base: 'center', md: 'flex-start' }} gap={3} color="green" mt={5}>
               <FaFacebook size="20px" />
               <FaWhatsapp size="20px" />
               <FaLinkedin size="20px" />
@@ -116,9 +108,7 @@ function Footer() {
                 bgColor="#ffffff"
               />
               {!isError ? (
-                <FormHelperText>
-                  Enter the email you'd like to receive the newsletter on.
-                </FormHelperText>
+                <FormHelperText>Enter the email you'd like to receive the newsletter on.</FormHelperText>
               ) : (
                 <FormErrorMessage>Email is required.</FormErrorMessage>
               )}

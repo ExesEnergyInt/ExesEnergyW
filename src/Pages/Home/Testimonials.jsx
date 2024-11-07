@@ -7,6 +7,7 @@ import {
   Heading,
   HStack,
   useColorModeValue,
+  Image,
 } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
@@ -140,6 +141,18 @@ const TestimonialSlider = () => {
           />
         ))}
       </HStack>
+      
+      <Box
+        mt={5}
+        // borderRadius="20"
+      >
+        <Image
+          w='80%'
+          mt={10}
+          src='Images/forHero/Rated.jpg '
+          alt="parners" />
+      
+      </Box>
     </Box>
   );
 };
