@@ -4,6 +4,7 @@ import Footer from '../../Components/footer'
 import ServiceHero from './ServiceHero'
 import OurService from './OurService'
 import Benefits from './Benefits'
+import CaseStudies from './CaseStudies'
 
 function ServiceIndex() {
   return (
@@ -12,6 +13,7 @@ function ServiceIndex() {
       <ServiceHero />
       <OurService />
       <Benefits />
+      <CaseStudies />
       
       <Footer />
     
