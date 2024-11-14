@@ -22,7 +22,7 @@ function ContactHero() {
       <Box
       w='100%'
       >
-        <Image src="public/Images/Contact_Bg.png" />
+        <Image src="Images/Contact_Bg.png" />
       </Box>
 
       <Box
