@@ -12,6 +12,10 @@ import ErrorMess from './Pages/ErrorMessage';
 import ServiceIndex from './Pages/Services/ServiceIndex';
 import ServiceHero from './Pages/Services/ServiceHero';
 
+// Contact Page
+import ContactIndex from './Pages/Contact/ContactIndex';
+import ContactHero from './Pages/Contact/ContactHero';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -26,6 +30,14 @@ const router = createBrowserRouter([
     element: <ServiceIndex />,
     children: [
       { index: true, element: <ServiceHero /> }
+    ],
+    errorElement: <ErrorMess />,
+  },
+  {
+    path: '/Contact',
+    element: <ContactIndex />,
+    children: [
+      { index: true, element: <ContactHero /> }
     ],
     errorElement: <ErrorMess />,
   },

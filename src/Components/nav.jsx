@@ -37,12 +37,13 @@ function Nav() {
         fontSize={{ base: 'sm', md: 'md', lg: 'lg' }}
         display={{ base: 'none', md: 'none', lg: 'flex' }}
       >
+        <Link to="/">Home</Link>
         <Link to="/Services">Services</Link>
         <Link to="/pricing">Pricing</Link>
+        <Link to="/contact">Contact</Link>
         <Link to="/verticals">Verticals</Link>
         <Link to="/case-studies">Case Studies</Link>
         <Link to="/resources">Resources</Link>
-        <Link to="/contact">Contact</Link>
         <Link to="/partner">Our Partner</Link>
       </Flex>
 
@@ -86,12 +87,18 @@ function Nav() {
           fontSize="xl"
           color="black"
         >
+          <Link to="/" onClick={() => changeDisplay('none')}>Home</Link>
           <Link to="/Services" onClick={() => changeDisplay('none')}>Services</Link>
           <Link to="/pricing" onClick={() => changeDisplay('none')}>Pricing</Link>
-          <Link to="/verticals" onClick={() => changeDisplay('none')}>Verticals</Link>
-          <Link to="/case-studies" onClick={() => changeDisplay('none')}>Case Studies</Link>
-          <Link to="/resources" onClick={() => changeDisplay('none')}>Resources</Link>
+
           <Link to="/contact" onClick={() => changeDisplay('none')}>Contact</Link>
+          
+          <Link to="/verticals" onClick={() => changeDisplay('none')}>Verticals</Link>
+          
+          <Link to="/case-studies" onClick={() => changeDisplay('none')}>Case Studies</Link>
+          
+          <Link to="/resources" onClick={() => changeDisplay('none')}>Resources</Link>
+          
           <Link to="/partner" onClick={() => changeDisplay('none')}>Our Partner</Link>
         </Flex>
       </Flex>

@@ -29,10 +29,13 @@ function Footer() {
       left="50%"
       transform="translateX(-50%)" // Center the Box horizontally
     >
-      <Flex justifyContent="center">
+      <Flex
+        justifyContent="center"
+      >
         <Flex
           m={10}
-          flexDirection={{ base: 'column', md: 'row' }}
+          flexDirection={{ base: 'column', md: 'column', lg:'row' }}
+          justify='center'
           justifyContent="space-between"
           alignItems="flex-start"
           maxW="1200px"
@@ -85,11 +88,46 @@ function Footer() {
               energy solutions, customized to fit your unique needs.
             </Text>
             <Flex justifyContent={{ base: 'center', md: 'flex-start' }} gap={3} color="green" mt={5}>
-              <FaFacebook size="20px" />
-              <FaWhatsapp size="20px" />
-              <FaLinkedin size="20px" />
-              <FaInstagram size="20px" />
-              <FaTwitter size="20px" />
+
+              <a
+                href="https://web.facebook.com/EXESENERGY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebook size="20px" />
+              </a>
+              
+              <a
+                href="https://bit.ly/4fGej7L"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp size="20px" />
+              </a>
+              
+              <a
+                href="https://x.com/Exesenergy_"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTwitter size="20px" />
+              </a>
+              
+              <a
+                href="https://www.instagram.com/exesenergy_/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram size="20px" />
+              </a>
+              
+              <a
+                href="https://www.linkedin.com/company/exesenergy/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin size="20px" />
+              </a>
             </Flex>
           </Box>
 
