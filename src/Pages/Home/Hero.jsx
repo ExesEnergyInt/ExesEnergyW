@@ -3,6 +3,7 @@ import { Box, Button, Flex, Image, Text } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 
 function Hero() {
+  
   return (
     <Flex
       backgroundColor="#E3FFF1"
@@ -47,6 +48,7 @@ function Hero() {
           colorScheme="green"
         >
           Get A Free Quote
+
         </Button>
 
         <Flex justifyContent="center" mt={5}>
