@@ -39,7 +39,7 @@ function Nav() {
       >
         <Link to="/">Home</Link>
         <Link to="/Services">Services</Link>
-        <Link to="/pricing">Pricing</Link>
+        <Link to="/Price">Pricing</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/verticals">Verticals</Link>
         <Link to="/case-studies">Case Studies</Link>
@@ -89,7 +89,8 @@ function Nav() {
         >
           <Link to="/" onClick={() => changeDisplay('none')}>Home</Link>
           <Link to="/Services" onClick={() => changeDisplay('none')}>Services</Link>
-          <Link to="/pricing" onClick={() => changeDisplay('none')}>Pricing</Link>
+          
+          <Link to="/Price" onClick={() => changeDisplay('none')}>Pricing</Link>
 
           <Link to="/contact" onClick={() => changeDisplay('none')}>Contact</Link>
           
