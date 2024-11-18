@@ -16,6 +16,10 @@ import ServiceHero from './Pages/Services/ServiceHero';
 import ContactIndex from './Pages/Contact/ContactIndex';
 import ContactHero from './Pages/Contact/ContactHero';
 
+// Price Page
+import PriceIndex from './Pages/Price/PriceIndex';
+import PriceHero from './Pages/Price/PriceHero';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -41,6 +45,15 @@ const router = createBrowserRouter([
     ],
     errorElement: <ErrorMess />,
   },
+
+  {
+    path: '/Price',
+    element: <PriceIndex />,
+    children: [
+      {index: true, element: <PriceHero />}
+    ],
+    errorElement: <ErrorMess />
+  }
 ]);
 
 function App() {
