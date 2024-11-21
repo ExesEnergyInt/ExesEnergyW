@@ -68,46 +68,49 @@ const Household = () => {
       p={{ base: 4, md: 8 }}
       bg="green.900"
       color='white'
-      borderRadius="50px"
-      boxShadow="md"
-      maxW={{ base: '100%', sm: '90%', md: '80%', lg: '60%' }}
+      borderRadius="30px"
+      border={{ base: "1px solid", md: "2px solid" }}
+      borderColor="gray.200"
+      boxShadow="lg"
+      maxW={{ base: "100%", sm: "90%", md: "80%", lg: "60%" }}
       mx="auto"
       mb={10}
-      pt='8'
-      w={{base:'50%', lg:'60%' }}
-      // height='80vh'
     >
       <Text as="h3"
-        fontSize={{ base: '3xl', md: '2xl' }}
+        fontSize={{ base: "xl", md: "2xl" }}
         fontWeight="bold"
         mb={4}
-        color='green.500'
+        color="green.500"
+        textAlign="center"
       >
         Commercial
       </Text>
       <Flex
-        flexDirection={{base: 'column', sm: 'column', lg:'row', md:'row'}}
+       flexDirection={{ base: "column", md: "row" }}
+        align="center"
         mb={4}
         w="100%"
-        textAlign={{ base: 'center', md: 'left' }}
         gap={3}
       >
-        <Text mb={2}>Select your solar package plan:</Text>
+        <Text mb={2} fontSize={{ base: "sm", md: "md" }} flexShrink={0}>Select your solar package plan:</Text>
         
         <Select
           value={selectedPackage}
           onChange={handleChange}
-          w={{ base: '100%', md: '100px' }}
-          mx={{ base: 'auto', md: 0 }}
-          bg='white'
-          color='black'
+          w={{ base: "100%", md: "200px" }}
+          fontSize={{ base: "sm", md: "md" }}
         >
-          <option value="1kva">1kva</option>
+          {Object.keys(packages).map((key) => (
+            <option key={key} value={key}>
+              {key}
+            </option>
+          ))}
+          {/* <option value="1kva">1kva</option>
           <option value="2kva">2kva</option>
           <option value="5kva/8">5kva</option>
           <option value="5kva/12">5kva/12 panels</option>
           <option value="10kva/8">10kva/8 panels</option>
-          <option value="10kva/16">10kva/16 panels</option>
+          <option value="10kva/16">10kva/16 panels</option> */}
         </Select>
       </Flex>
 
@@ -115,7 +118,6 @@ const Household = () => {
         mt={4}
         mb={2}
         fontWeight="bold"
-        m='auto'
       >
         {Comeswith}
       </Text>
@@ -126,13 +128,20 @@ const Household = () => {
           w="100%"
           lineHeight="40px"
         >
-          <Text as="h4" fontSize={{ base: 'md', md: 'lg' }} fontWeight="semibold" mb={2}>
+          <Text
+            as="h4"
+            fontSize={{ base: "sm", md: "md" }}
+            fontWeight="semibold"
+            mb={2}
+          >
             What it can power:
           </Text>
         
           <VStack spacing={2} align="start">
             {products.map((product, index) => (
-              <Text key={index}>• {product}</Text>
+              <Text key={index} fontSize={{ base: "sm", md: "md" }}>
+                • {product}
+              </Text>
             ))}
           </VStack>
 
@@ -143,12 +152,12 @@ const Household = () => {
       <Box
         textAlign='center'
         mx='auto'
+        mt={6}
       >
         <Text
-          mt={4}
-          fontSize={{ base: 'xl', md: '2xl' }}
+          fontSize={{ base: "lg", md: "xl" }}
           fontWeight="bold"
-          color="green.500"
+          color="white"
         >
           ₦ {price}
         </Text>

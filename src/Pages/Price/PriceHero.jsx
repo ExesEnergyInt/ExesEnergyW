@@ -32,8 +32,11 @@ const PriceHero = () => {
   // const [selectedPackage, setSelectedPackage] = useState('3kva');
 
   return (
-    <Box mt="10%">
-      <Box>
+    <Box
+      mt={{ lg:"10%", base:'18%'}}>
+      <Box
+      
+      >
         <Text
           as="h1"
           fontSize={{ base: '3xl', md: '5xl', lg: '6xl' }}

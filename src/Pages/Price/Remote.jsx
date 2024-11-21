@@ -42,45 +42,53 @@ const Household = () => {
   const { Comeswith, products, price } = packages[selectedPackage];
 
   return (
-      <Flex
+       <Flex
       direction="column"
       align="start"
       p={{ base: 4, md: 8 }}
       bg="white"
-      borderRadius="50px"
-      boxShadow="md"
-      maxW={{ base: '100%', sm: '90%', md: '80%', lg: '60%' }}
+      borderRadius="30px"
+      border={{ base: "1px solid", md: "2px solid" }}
+      borderColor="gray.200"
+      boxShadow="lg"
+      maxW={{ base: "100%", sm: "90%", md: "80%", lg: "60%" }}
       mx="auto"
       mb={10}
-      pt='8'
-      w={{base:'50%', lg:'60%' }}
-      // height='80vh'
     >
-      <Text as="h3"
-        fontSize={{ base: '3xl', md: '2xl' }}
+     <Text
+        as="h3"
+        fontSize={{ base: "xl", md: "2xl" }}
         fontWeight="bold"
         mb={4}
-        color='green.500'
+        color="green.500"
+        textAlign="center"
       >
         Remote
       </Text>
-      <Flex
-        flexDirection={{base: 'column', sm: 'column', lg:'row', md:'row'}}
+       <Flex
+        flexDirection={{ base: "column", md: "row" }}
+        align="center"
         mb={4}
         w="100%"
-        textAlign={{ base: 'center', md: 'left' }}
         gap={3}
       >
-        <Text mb={2}>Select your solar package plan:</Text>
+         <Text mb={2} fontSize={{ base: "sm", md: "md" }} flexShrink={0}>
+          Select your solar package plan:
+        </Text>
         
         <Select
-          value={selectedPackage}
+         value={selectedPackage}
           onChange={handleChange}
-          w={{ base: '100%', md: '100px' }}
-          mx={{ base: 'auto', md: 0 }}
+          w={{ base: "100%", md: "200px" }}
+          fontSize={{ base: "sm", md: "md" }}
         >
-          <option value="Basic">Basic Plan - 800w mono solar Gen </option>
-          <option value="Premium"> Premium Plan - 1200w mono solar Gen</option>
+          {Object.keys(packages).map((key) => (
+            <option key={key} value={key}>
+              {key}
+            </option>
+          ))}
+          {/* <option value="Basic">Basic Plan - 800w mono solar Gen </option>
+          <option value="Premium"> Premium Plan - 1200w mono solar Gen</option> */}
         </Select>
       </Flex>
 
@@ -88,7 +96,6 @@ const Household = () => {
         mt={4}
         mb={2}
         fontWeight="bold"
-        m='auto'
       >
         {Comeswith}
       </Text>
@@ -97,29 +104,31 @@ const Household = () => {
         
         <Box
           w="100%"
-          lineHeight="40px"
+          lineHeight="1.8"
         >
-          <Text as="h4" fontSize={{ base: 'md', md: 'lg' }} fontWeight="semibold" mb={2}>
+           <Text
+            as="h4"
+            fontSize={{ base: "sm", md: "md" }}
+            fontWeight="semibold"
+            mb={2}
+          >
             What it can power:
           </Text>
         
           <VStack spacing={2} align="start">
             {products.map((product, index) => (
-              <Text key={index}>• {product}</Text>
+              <Text key={index} fontSize={{ base: "sm", md: "md" }}>
+                • {product}
+              </Text>
             ))}
-          </VStack>
-
-          
+          </VStack>  
         </Box>
 
       </ScaleFade>
       <Box
-        textAlign='center'
-        mx='auto'
-      >
+       textAlign="center" mx="auto" mt={6}>
         <Text
-          mt={4}
-          fontSize={{ base: 'xl', md: '2xl' }}
+          fontSize={{ base: "lg", md: "xl" }}
           fontWeight="bold"
           color="green.500"
         >
