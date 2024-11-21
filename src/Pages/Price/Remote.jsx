@@ -11,32 +11,35 @@ import {
 
 // Package data
 const packages = {
-  '3kva': {
-    products: ['TV', 'Fan', 'Lighting'],
-    price: 300,
+  'Basic': {
+    Comeswith: 'Merstek 800w Solar Generator (Basic Plan)',
+    products: ['Laptop', 'Phones','Lights', 'Wifi/Router', 'Fan', 'Tv', 'Bulbs'],
+    price: '560,000.00',
   },
-  '5kva': {
-    products: ['TV', 'Fridge', 'Fan', 'Lighting'],
-    price: 500,
-  },
-  '8kva': {
-    products: ['TV', 'Washing Machine', 'Lighting', 'Microwave'],
-    price: 800,
-  },
-  '20kva': {
-    products: ['All House Appliances'],
-    price: 2000,
-  },
+
+  'Premium': {
+    Comeswith: 'Merstek 1200w Solar Generator (Basic Plan)',
+    products: ['Laptops', 'Phones', 'Lights', 'Wifi/Router', 'Fan', 'Tv', 'Bulbs', 'Charging Points'],
+    price: '690,000.00',
+
+  }
+
+  // '1x190w2 ': {
+  //   Comeswith: 'Merstek 1200w Solar Generator (Premium Plan)',
+  //    products: ['Laptop', 'Phones','Lights', 'Wifi/Router', 'Fan', 'Mini Fridge', 'Tv', 'Bulbs'],
+  //   price: '690,000.00',
+  // },
+
 };
 
-const Remote = () => {
-  const [selectedPackage, setSelectedPackage] = useState('3kva');
+const Household = () => {
+  const [selectedPackage, setSelectedPackage] = useState('Basic');
 
   const handleChange = (e) => {
     setSelectedPackage(e.target.value);
   };
 
-  const { products, price } = packages[selectedPackage];
+  const { Comeswith, products, price } = packages[selectedPackage];
 
   return (
       <Flex
@@ -49,10 +52,17 @@ const Remote = () => {
       maxW={{ base: '100%', sm: '90%', md: '80%', lg: '60%' }}
       mx="auto"
       mb={10}
-      // color="white"
+      pt='8'
+      w={{base:'50%', lg:'60%' }}
+      // height='80vh'
     >
-      <Text as="h3" fontSize={{ base: 'xl', md: '2xl' }} fontWeight="bold" mb={4}>
-        House Hold
+      <Text as="h3"
+        fontSize={{ base: '3xl', md: '2xl' }}
+        fontWeight="bold"
+        mb={4}
+        color='green.500'
+      >
+        Remote
       </Text>
       <Flex
         flexDirection={{base: 'column', sm: 'column', lg:'row', md:'row'}}
@@ -62,23 +72,33 @@ const Remote = () => {
         gap={3}
       >
         <Text mb={2}>Select your solar package plan:</Text>
+        
         <Select
           value={selectedPackage}
           onChange={handleChange}
           w={{ base: '100%', md: '100px' }}
           mx={{ base: 'auto', md: 0 }}
         >
-          
-          <option value="3kva">3kva</option>
-          <option value="5kva">5kva</option>
-          <option value="8kva">8kva</option>
-          <option value="20kva">20kva</option>
+          <option value="Basic">Basic Plan - 800w mono solar Gen </option>
+          <option value="Premium"> Premium Plan - 1200w mono solar Gen</option>
         </Select>
       </Flex>
 
+      <Text
+        mt={4}
+        mb={2}
+        fontWeight="bold"
+        m='auto'
+      >
+        {Comeswith}
+      </Text>
+
       <ScaleFade initialScale={0.9} in={true}>
         
-        <Box w="100%">
+        <Box
+          w="100%"
+          lineHeight="40px"
+        >
           <Text as="h4" fontSize={{ base: 'md', md: 'lg' }} fontWeight="semibold" mb={2}>
             What it can power:
           </Text>
@@ -101,9 +121,9 @@ const Remote = () => {
           mt={4}
           fontSize={{ base: 'xl', md: '2xl' }}
           fontWeight="bold"
-          color="green.700"
+          color="green.500"
         >
-          ${price}
+          ₦ {price}
         </Text>
         
         <Button
@@ -120,4 +140,4 @@ const Remote = () => {
   );
 };
 
-export default Remote;
+export default Household;
