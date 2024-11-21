@@ -9,27 +9,27 @@ import Commercial from './Commercial';
 import Remote from './Remote';
 
 // Package data
-const packages = {
-  '3kva': {
-    products: ['TV', 'Fan', 'Lighting'],
-    price: 300,
-  },
-  '5kva': {
-    products: ['TV', 'Fridge', 'Fan', 'Lighting'],
-    price: 500,
-  },
-  '8kva': {
-    products: ['TV', 'Washing Machine', 'Lighting', 'Microwave'],
-    price: 800,
-  },
-  '20kva': {
-    products: ['All House Appliances'],
-    price: 2000,
-  },
-};
+// const packages = {
+//   '3kva': {
+//     products: ['TV', 'Fan', 'Lighting'],
+//     price: 300,
+//   },
+//   '5kva': {
+//     products: ['TV', 'Fridge', 'Fan', 'Lighting'],
+//     price: 500,
+//   },
+//   '8kva': {
+//     products: ['TV', 'Washing Machine', 'Lighting', 'Microwave'],
+//     price: 800,
+//   },
+//   '20kva': {
+//     products: ['All House Appliances'],
+//     price: 2000,
+//   },
+// };
 
 const PriceHero = () => {
-  const [selectedPackage, setSelectedPackage] = useState('3kva');
+  // const [selectedPackage, setSelectedPackage] = useState('3kva');
 
   return (
     <Box mt="10%">
@@ -62,6 +62,7 @@ const PriceHero = () => {
         gap={{ base: 4, lg: 8 }} 
         justifyContent="center" 
         alignItems="center"
+        m='10'
       >
         <Remote />
         <Commercial />
