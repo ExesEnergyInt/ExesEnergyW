@@ -14,21 +14,33 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const testimonials = [
   {
-    name: 'Gbadebo Samuel',
+    name: 'Thank you ExesEnergy',
     feedback:
-      "My go-to icon pack for every project that I start working on. The flexibility and customization it gives me hasn't been matched by anyone so far.",
+      "Switching to solar with Exesenergy was one of my best decisions this year—I only wish I’d done it sooner! No more worrying about PHCN outages, fuel scarcity, or generator repairs. Plus, Abraham’s support made the process seamless, answering all my questions. And the pricing? A pleasant bonus!",
     image: 'https://via.placeholder.com/150',
   },
   {
-    name: 'Olamide Balogun',
+    name: 'Thank you ExesEnergy',
     feedback:
-      'The icons fit perfectly into my project design. I love how customizable and versatile they are.',
+      "Honestly, it's just perfect! If I come shop, everywhere go just calm—super chill, no noise, no stress. Only this place truly gives me joy, every single time. It's the peace and calm I didn’t know I needed. Thank you ExesEnergy",
     image: 'https://via.placeholder.com/150',
   },
   {
-    name: 'Damilare Samuel',
+    name: 'Thank you ExesEnergy',
     feedback:
-      'These icons have become a core part of my design toolkit. Highly recommended for any design project.',
+      "Shoutout to Exesenergy and Sunfi! The ease this inverter has brought to my life is unmatched. It’s been a total game-changer, helping me stay on top of my tasks and boosting my efficiency like never before. Thanks a ton, ma! 🙌",
+    image: 'https://via.placeholder.com/150',
+  },
+  {
+    name: 'Thank you ExesEnergy',
+    feedback:
+      "It helps me save a ton on generator fuel costs by cutting down how often I need to use it. Less noise, less hassle, and more money in my pocket—it’s a win all around!",
+    image: 'https://via.placeholder.com/150',
+  },
+  {
+    name: 'Thank you ExesEnergy',
+    feedback:
+      "Since I installed it, I haven’t had to spend a single penny on gas or fuel to keep my shop running. It’s efficient, reliable, and has completely revolutionized the way I manage my energy needs!",
     image: 'https://via.placeholder.com/150',
   },
 ];
