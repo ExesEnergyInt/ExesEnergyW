@@ -23,20 +23,20 @@ function Hero() {
         
         <Text
           as="h1"
-          fontSize={{ base: '3xl', md: '5xl', lg: '6xl' }}
+          fontSize={{ base: '3xl', md: '5xl', lg: '5xl' }}
           fontWeight="700"
           color="#026834"
           mb={2}
         >
-          Switch to Solar Energy Today
+          24/7 Solar Power Anywhere  <br/> – Save More
         </Text>
         
         <Text
-          as="h2"
-          fontSize={{ base: 'sm', md: 'lg', lg: '2xl' }}
+          as="h4"
+          fontSize={{ base: 'sm', md: 'lg', lg: 'lg' }}
           color="#464646"
         >
-          Save money and save the environment today
+         Enjoy Seamless Power for Home & Business with Exesenergy
         </Text>
         
         <Button
@@ -47,7 +47,7 @@ function Hero() {
           rightIcon={<ArrowForwardIcon size="lg" />}
           colorScheme="green"
         >
-          Get A Free Quote
+          Book a Consultation
 
         </Button>
 

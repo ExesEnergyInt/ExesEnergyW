@@ -58,11 +58,11 @@ function Services() {
                 />
               </Flex>
 
-              <Stack m={{ base: 4, md: 6 }} alignItems="center">
+              <Stack m={{ base: 4, md: 4 }} alignItems="center">
                 <CardBody>
                   <Heading
-                    fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
-                    fontWeight={600}
+                    fontSize={{ base: "lg", md: "xl", lg: "xl" }}
+                    fontWeight={700}
                     textAlign="center"
                   >
                     {heading}
@@ -70,9 +70,10 @@ function Services() {
 
                   <Text
                     py={2}
-                    fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                    fontSize={{ base: "sm", md: "md", lg: "" }}
                     fontWeight={400}
-                    textAlign="center"
+                    textAlign='justify'
+
                   >
                     {text}
                   </Text>

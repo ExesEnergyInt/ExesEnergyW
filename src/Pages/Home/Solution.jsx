@@ -8,7 +8,7 @@ function Solution() {
       p={{ base: 4, md: 8, lg: 20 }}
       flexDir="column"
       alignItems="center"
-      mt={10}
+      mt={{ lg:36,}}
     >
       <Text
         as="h1"
