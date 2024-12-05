@@ -140,7 +140,7 @@ const Household = () => {
           colorScheme="green"
           size={{ base: 'sm', md: 'md' }}
         >
-          Choose
+          Get Now !!
         </Button>
       </Box>
     </Flex>
