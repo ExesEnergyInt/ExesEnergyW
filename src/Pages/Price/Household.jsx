@@ -191,7 +191,7 @@ const Household = () => {
           ₦ {price}
         </Text>
         <Button mt={3} colorScheme="green" size={{ base: "sm", md: "md" }}>
-          Choose
+          Get Now !!
         </Button>
       </Box>
     </Flex>

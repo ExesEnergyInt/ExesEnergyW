@@ -35,7 +35,7 @@ const packages = {
   },
 
   '5kva/12': {
-    Comeswith: '4 Batteries, 12 Solar Panels - 440w',
+    Comeswith: '8 Batteries, 12 Solar Panels - 440w',
      products: ['1 Energy Saving Fridge','TV', 'Fan', 'Decoders', 'Sound System', 'Lights', 'Charging points','and some more......'],
      price: '5,300,000.00',
   },
@@ -43,12 +43,12 @@ const packages = {
   '10kva/8': {
     Comeswith: '4 Batteries, 8 Solar Panels - 440w',
    products: ['Freezer','Inverter AC (1hp)','Washing Machine', 'Microwave Oven','1 Energy Saving Fridge','TV', 'Fan','and some more......'],
-    price: '4,700,000.00',
+    price: '4,000,000.00',
   },
   '10kva/16': {
-    Comeswith: '4 Batteries, 16 Solar Panels - 440w',
+    Comeswith: '8 Batteries, 16 Solar Panels - 440w',
    products: ['Freezer','Inverter AC (1hp)','Washing Machine', 'Microwave Oven','1 Energy Saving Fridge','TV', 'Fan','and some more......'],
-    price: '8,000,000.00',
+    price: '6,400,000.00',
   },
 };
 
@@ -167,7 +167,7 @@ const Household = () => {
           colorScheme="green"
           size={{ base: 'sm', md: 'md' }}
         >
-          Choose
+          Get Now !!
         </Button>
       </Box>
     </Flex>
