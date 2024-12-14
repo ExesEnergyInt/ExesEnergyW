@@ -12,9 +12,9 @@ function ContactHero() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setError(''); // Reset error message
+    setError('');
 
-    // Basic validation
+ 
     if (!name || !email || !subject || !message) {
       setError('All fields are required.');
       setIsLoading(false);
