@@ -35,9 +35,11 @@ function ContactHero() {
       const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/send-email`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        mode: 'cors',
         body: JSON.stringify(formData),
-        
       });
+      
+     
 
       if (response.ok) {
         alert('Email sent successfully!');
