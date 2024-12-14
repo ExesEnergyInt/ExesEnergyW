@@ -29,11 +29,14 @@ function ContactHero() {
 
     const formData = { name, email, subject, message };
 
+    console.log("API Base URL:", import.meta.env.VITE_API_BASE_URL);
+
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/send-email`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/send-email`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
+        
       });
 
       if (response.ok) {
