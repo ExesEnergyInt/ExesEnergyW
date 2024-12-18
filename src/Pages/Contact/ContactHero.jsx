@@ -10,52 +10,49 @@ function ContactHero() {
   const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setError('');
+  e.preventDefault();
+  setIsLoading(true);
+  setError('');
 
- 
-    if (!name || !email || !subject || !message) {
-      setError('All fields are required.');
-      setIsLoading(false);
-      return;
+  if (!name || !email || !subject || !message) {
+    setError('All fields are required.');
+    setIsLoading(false);
+    return;
+  }
+
+  if (!/\S+@\S+\.\S+/.test(email)) {
+    setError('Invalid email format.');
+    setIsLoading(false);
+    return;
+  }
+
+  const formData = { name, email, subject, message };
+
+  try {
+    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/send-email`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      alert(result.message || 'Email sent successfully!');
+      setName('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
+    } else {
+      setError(result.error || 'Failed to send email.');
     }
+  } catch (error) {
+    setError('An unexpected error occurred. Please try again later.');
+  } finally {
+    setIsLoading(false);
+  }
+};
 
-    if (!/\S+@\S+\.\S+/.test(email)) {
-      setError('Invalid email format.');
-      setIsLoading(false);
-      return;
-    }
-
-    const formData = { name, email, subject, message };
-
-    console.log("API Base URL:", import.meta.env.VITE_API_BASE_URL);
-
-    try {
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/send-email`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        mode: 'cors',
-        body: JSON.stringify(formData),
-      });
-      
-     
-
-      if (response.ok) {
-        alert('Email sent successfully!');
-        setName('');
-        setEmail('');
-        setSubject('');
-        setMessage('');
-      } else {
-        throw new Error('Failed to send email. Please try again.');
-      }
-    } catch (error) {
-      setError(error.message || 'An unexpected error occurred.');
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   return (
     <Flex

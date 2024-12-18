@@ -192,3 +192,13 @@ ${message}`,
 
 // Export the app for serverless
 module.exports = app; -->
+
+
+
+
+
+
+
+<!-- EMAIL_HOST=support@exesenergy.co
+HOST_PASSWORD=xpqq-yqnu-dugm-bdfe
+RECEPIENT_EMAIL=marketing@exesenergy.co -->
