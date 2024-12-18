@@ -29,7 +29,7 @@ function ContactHero() {
   const formData = { name, email, subject, message };
 
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/send-email`, {
+    const response = await fetch("https://backend-ten-wine-50.vercel.app/api/send-email", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
