@@ -1,6 +1,7 @@
 import { Flex, Text, Card, CardBody, Stack, Image, Heading, Button } from '@chakra-ui/react';
 import React from 'react';
 import { SoluData } from './SolutionData';
+import { Link } from 'react-router-dom';
 
 function Solution() {
   return (
@@ -29,7 +30,7 @@ function Solution() {
         mt={10}
       >
         {SoluData.map((data, index) => {
-          const { image, heading, text } = data;
+          const { image, heading, text, link } = data;
           return (
             <Card
               key={index} // Added key prop
@@ -62,6 +63,8 @@ function Solution() {
                   </Text>
 
                   <Button
+                    as={Link}
+                    to={link}
                     width="100%"
                     mt={4}
                     colorScheme="green"
