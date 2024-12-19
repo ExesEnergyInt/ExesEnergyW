@@ -5,6 +5,8 @@ import ServiceHero from './ServiceHero'
 import OurService from './OurService'
 import Benefits from './Benefits'
 import CaseStudies from './CaseStudies'
+import DownToTop from '../../Components/DownToTop'
+import ScrollToTop from '../../Components/ScrollToTop'
 
 function ServiceIndex() {
   return (
@@ -14,8 +16,10 @@ function ServiceIndex() {
       <OurService />
       <Benefits />
       <CaseStudies />
-      
+      <DownToTop />
       <Footer />
+
+      <ScrollToTop />
     
     </>
     
