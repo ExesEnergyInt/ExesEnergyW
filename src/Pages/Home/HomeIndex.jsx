@@ -10,6 +10,7 @@ import Blogs from './Blogs';
 import Questions from './Questions';
 import Footer from '../../Components/footer';
 import DownToTop from '../../Components/DownToTop';
+import ScrollToTop from '../../Components/ScrollToTop'
 
 
 function HomeIndex() {
@@ -25,6 +26,8 @@ function HomeIndex() {
       <Questions />
       <DownToTop />
       <Footer />
+
+      <ScrollToTop />
     </>
     
   )

@@ -1,5 +1,6 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+import ScrollToTop from './Components/ScrollToTop';
 
 // For Home page
 import HomeIndex from './Pages/Home/HomeIndex';
@@ -19,6 +20,19 @@ import ContactHero from './Pages/Contact/ContactHero';
 // Price Page
 import PriceIndex from './Pages/Price/PriceIndex';
 import PriceHero from './Pages/Price/PriceHero';
+
+// Articles
+// FOR Commercial
+import CommIndex from './Pages/Articles/Commercial/CommIndex';
+import CommArt from './Pages/Articles/Commercial/CommArt';
+
+// FOR Industrial
+import IndusArt from './Pages/Articles/Industrial/IndusArt';
+
+// FOR Residential
+import ResdArt from './Pages/Articles/Residential/ResdArt';
+
+
 
 const router = createBrowserRouter([
   {
@@ -50,14 +64,39 @@ const router = createBrowserRouter([
     path: '/Price',
     element: <PriceIndex />,
     children: [
-      {index: true, element: <PriceHero />}
+      { index: true, element: <PriceHero /> }
     ],
     errorElement: <ErrorMess />
+  },
+
+  {
+    path: '/Articles/Commart',
+    element: <CommArt />,
+    errorElement: <ErrorMess />,
+  },
+  {
+    path: '/Articles/Indusart',
+    element: <IndusArt />,
+    errorElement: <ErrorMess />,
+  },
+
+  {
+    path: '/Articles/Resdart',
+    element: <ResdArt />,
+    errorElement: <ErrorMess />,
   }
+
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} >
+              <ScrollToTop /> {/* Ensures the page scrolls to the top on route change */}
+      
+      </RouterProvider>
+    </>
+  );
 }
 
 export default App;
