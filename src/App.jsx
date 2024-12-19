@@ -23,7 +23,6 @@ import PriceHero from './Pages/Price/PriceHero';
 
 // Articles
 // FOR Commercial
-import CommIndex from './Pages/Articles/Commercial/CommIndex';
 import CommArt from './Pages/Articles/Commercial/CommArt';
 
 // FOR Industrial
